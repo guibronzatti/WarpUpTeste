@@ -27,10 +27,12 @@ int funcTeste(char *teste) {
   char achar;
   int valid_id,tamanho,i;
   printf("Identificador: ");
+
   tamanho = strlen(teste);
   achar = teste[0];
   valid_id = valid_s(achar);
   achar = teste[0];
+  
   for(i=0;i<=tamanho;i++) {
     if(!(valid_f(achar))) {
       valid_id = 0;
@@ -47,3 +49,5 @@ int funcTeste(char *teste) {
     return 1;
   }
 }
+
+int main(void){}
