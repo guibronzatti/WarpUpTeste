@@ -6,7 +6,7 @@ GCC = gcc
 
 all: $(ALL)
 
-identifier: identifier.c identifier.h TestFoo.c  TestFoo_Runner.c
+identifier: identifier.c identifier.h TestFoo.c TestFoo_Runner.c
 	$(GCC) $(GCCFLAGS) -o $@ $@.c
 
 cov: identifier.c
