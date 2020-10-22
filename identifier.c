@@ -6,6 +6,8 @@
 // ----------------------------------------------------------------
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int valid_s(char ch) {
   if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
@@ -21,25 +23,22 @@ int valid_f(char ch) {
     return 0;
 }
 
-int main(void) {
+int funcTeste(char *teste) {
   char achar;
-  int  length, valid_id;
-  length = 0;
+  int valid_id,tamanho,i;
   printf("Identificador: ");
-  achar = fgetc(stdin);
+  tamanho = strlen(teste);
+  achar = teste[0];
   valid_id = valid_s(achar);
-  if(valid_id) {
-    length = 1;
-  }
-  achar = fgetc(stdin);
-  while(achar != '\n') {
+  achar = teste[0];
+  for(i=0;i<=tamanho;i++) {
     if(!(valid_f(achar))) {
       valid_id = 0;
     }
-    length++;
-    achar = fgetc(stdin);
+    achar = teste[i];
+    i++;
   }
-  if (valid_id && (length >= 1) && (length < 6)) {
+  if (valid_id && (tamanho >= 1) && (tamanho <= 6)) {
     printf("Valido\n");
     return 0;
   }
