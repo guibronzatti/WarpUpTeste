@@ -21,9 +21,9 @@ CFLAGS += -Wold-style-definition
 
 all: $(ALL)
 
-identifier: identifier.c
+identifier: ./src/identifier.c ./test/TestFoo.c ./test/test_runners/TestFoo_Runner.c
 	#$(GCC) $(GCCFLAGS) -o $@ $@.c
-	$(GCC) $(CFLAGS) ./src/identifier.c ./src/unity.c ./test/TestFoo.c ./test/test_runners/TestFoo_Runner.c -o test_foo.out
+	$(GCC) $(CFLAGS) identifier -o test_foo.out
 
 
 cov: identifier.c
