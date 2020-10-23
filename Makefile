@@ -23,7 +23,7 @@ all: $(ALL)
 
 identifier: identifier.c
 	#$(GCC) $(GCCFLAGS) -o $@ $@.c
-	$(GCC) $(CFLAGS) identifier.c unity.c TestFoo.c TestFoo_Runner.c -o test_foo.out
+	$(GCC) $(CFLAGS) ./src/identifier.c ./src/unity.c ./test/TestFoo.c ./test/test_runners/TestFoo_Runner.c -o test_foo.out
 
 
 cov: identifier.c
