@@ -30,9 +30,12 @@
 #include "identifier.h"
 
 /*=======External Functions This Runner Calls=====*/
-extern void setUp(void);
-extern void tearDown(void);
-extern void test_foo1(void);
+extern void test_warmpUp1(void);
+extern void test_warmpUp2(void);
+extern void test_warmpUp3(void);
+extern void test_warmpUp4(void);
+extern void test_warmpUp5(void);
+extern void test_warmpUp6(void);
 
 
 /*=======Suite Setup=====*/
@@ -67,7 +70,12 @@ int main(void)
 {
   suite_setup();
   UnityBegin("test/TestFoo.c");
-  RUN_TEST(test_foo1, 4);
+  RUN_TEST(test_warmpUp1, 5);
+  RUN_TEST(test_warmpUp2, 11);
+  RUN_TEST(test_warmpUp3, 17);
+  RUN_TEST(test_warmpUp4, 23);
+  RUN_TEST(test_warmpUp5, 29);
+  RUN_TEST(test_warmpUp6, 35);
 
   return suite_teardown(UnityEnd());
 }
