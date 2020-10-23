@@ -4,26 +4,13 @@ GCCFLAGS = -g -Wall -Wfatal-errors
 ALL = identifier
 GCC = gcc
 
-CFLAGS=-std=c99
-CFLAGS += -Wall
-CFLAGS += -Wextra
-CFLAGS += -Wpointer-arith
-CFLAGS += -Wcast-align
-CFLAGS += -Wwrite-strings
-CFLAGS += -Wswitch-default
-CFLAGS += -Wunreachable-code
-CFLAGS += -Winit-self
-CFLAGS += -Wmissing-field-initializers
-CFLAGS += -Wno-unknown-pragmas
-CFLAGS += -Wstrict-prototypes
-CFLAGS += -Wundef
-CFLAGS += -Wold-style-definition
-
 all: $(ALL)
 
-identifier: ./src/identifier.c ./test/TestFoo.c ./test/test_runners/TestFoo_Runner.c
+identifier: ./src/identifier.c ./test/TestFoo.c
 	#$(GCC) $(GCCFLAGS) -o $@ $@.c
-	$(GCC) $(CFLAGS) identifier -o test_foo.out
+	#$(GCC) $(CFLAGS) -o test_foo.out ./src/identifier.c ./test/TestFoo.c
+	gcc -std=c99 -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wstrict-prototypes -Wundef -Wold-style-definition -Isrc -I./src  ./src/unity.c src/foo.c  test/TestFoo.c  test/test_runners/TestFoo_Runner.c -o test_foo.out
+
 
 
 cov: identifier.c
