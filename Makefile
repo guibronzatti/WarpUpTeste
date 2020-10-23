@@ -8,7 +8,7 @@ all: $(ALL)
 
 identifier: identifier.c identifier.h TestFoo.c TestFoo_Runner.c
 	$(GCC) $(GCCFLAGS) -o $@ $@.c
-	$(GCC) $(GCCFLAGS) unity.c identifier.c  TestFoo.c  TestFoo_Runner.c -o test_foo.out
+	$(GCC) $(GCCFLAGS) TestFoo.c -o test_foo.out
 
 
 cov: identifier.c
