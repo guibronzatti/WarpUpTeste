@@ -10,9 +10,10 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - gcc
+before_install:
+  - sudo apt-get install rbenv
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
-  - sudo apt-get install rbenv
 
 script:
   - make
