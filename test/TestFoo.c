@@ -35,7 +35,7 @@ void test_warmpUp5(void)
 void test_warmpUp6(void)
 {
   char teste[4] = "12bd";
-  TEST_ASSERT_EQUAL_INT(1, funcTeste(teste));
+  TEST_ASSERT_EQUAL_INT(0, funcTeste(teste));
 }
 
 
