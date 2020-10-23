@@ -8,9 +8,11 @@ all: $(ALL)
 
 identifier: identifier.c identifier.h TestFoo.c TestFoo_Runner.c
 	$(GCC) $(GCCFLAGS) -o $@ $@.c
+	gcc -std=c99 -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wstrict-prototypes -Wundef -Wold-style-definition -Isrc unity.c identifier.c  TestFoo.c  TestFoo_Runner.c -o test_foo.out
+
 
 cov: identifier.c
-	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ src/identifier.c
+	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
 
 clean:
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
