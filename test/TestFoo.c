@@ -5,7 +5,7 @@
 void test_warmpUp1(void)
 {
   char teste[6] = "sabcgg";
-  TEST_ASSERT_EQUAL_INT(0, funcTeste(teste));
+  TEST_ASSERT_EQUAL_INT(1, funcTeste(teste));
 }
 
 void test_warmpUp2(void)
