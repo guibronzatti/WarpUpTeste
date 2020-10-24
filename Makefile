@@ -21,6 +21,9 @@ cov: ./src/identifier_gcov.c
 	./cov
 	gcov -b identifier_gcov.c
 
+check: ./src/identifier.c
+	cppcheck ./src/identifier.c
+
 clean:
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
 
