@@ -16,6 +16,8 @@ identifier: ./src/identifier.c ./test/TestFoo.c
 
 cov: ./src/identifier_gcov.c
 	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ ./src/identifier_gcov.c
+	./cov
+	gcov -b .identifier_gcov.c
 
 clean:
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
