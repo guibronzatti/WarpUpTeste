@@ -54,15 +54,18 @@ int main(void){
   char *teste1 = malloc(sizeof(char)*6);
   char *teste2 = malloc(sizeof(char)*7);
   char *teste3 = malloc(sizeof(char)*6);
-  char *teste4 = malloc(sizeof(char)*3);
+  char *teste4 = malloc(sizeof(char)*4);
+  char *teste5 = malloc(sizeof(char)*3);
   teste1 = "sabcgg";
   funcTeste(teste1);
   teste2 = "ssabcgg";
   funcTeste(teste2);
   teste3 = "abc101";
   funcTeste(teste3);
-  teste4 = "3ad";
+  teste4 = "12ad";
   funcTeste(teste4);
+  teste5 = "abc";
+  funcTeste(teste5);
 
   
   return 0;
