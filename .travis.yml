@@ -17,4 +17,5 @@ install:
 
 script:
   - make
+  - make cov
 #  - make test
