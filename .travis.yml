@@ -21,4 +21,5 @@ script:
   - make
   - make testuni
   - make cov
+  - make cpp
 #  - make test
