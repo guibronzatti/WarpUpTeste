@@ -25,12 +25,12 @@ check: ./src/identifier.c
 	cppcheck ./src/identifier.c
 	
 valgrind: ./src/identifier_valgrind.c
-	gcc -g -Wall -Wfatal-errors identifier_valgrind.c -o id
-	valgrind --leak-check=full --show-leak-kinds=all ./id
+	gcc -g -Wall -Wfatal-errors ./src/identifier_valgrind.c -o id
+	valgrind --leak-check=full --show-leak-kinds=all ./src/id
 
 address: ./src/identifier_valgrind.c
-	gcc -g -Wall -Wfatal-errors -fsanitize=address identifier_valgrind.c -o test
-	./test
+	gcc -g -Wall -Wfatal-errors -fsanitize=address ./src/identifier_valgrind.c -o ./src/test
+	./src/test
 
 clean:
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
