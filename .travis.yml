@@ -22,4 +22,6 @@ script:
   - make testuni
   - make cov
   - make check
+  - make valgrind
+  - make address
 #  - make test
