@@ -52,7 +52,7 @@ int funcTeste(char *teste) {
 }
 
 int main(void){
-  char teste[6] = "Abcd12";
+  char teste[7] = "Abcd12";
   funcTeste(teste);
   return 0;
 }
