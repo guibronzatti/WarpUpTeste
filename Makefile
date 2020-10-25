@@ -16,20 +16,20 @@ testuni: ./test/TestFoo.c
 	ruby ./auto/generate_test_runner.rb test/TestFoo.c  test/test_runners/TestFoo_Runner.c
 	
 
-cov: ./src/identifier_gcov.c
-	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ ./src/identifier_gcov.c
+cov: ./src/identifier_main.c
+	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ ./src/identifier_main.c
 	./cov
-	gcov -b identifier_gcov.c
+	gcov -b identifier_main.c
 
 check: ./src/identifier.c
 	cppcheck ./src/identifier.c
 	
-valgrind: ./src/identifier_valgrind.c
-	gcc -g -Wall -Wfatal-errors ./src/identifier_valgrind.c -o ./src/id
+valgrind: ./src/identifier_main.c
+	gcc -g -Wall -Wfatal-errors ./src/identifier_main.c -o ./src/id
 	valgrind --leak-check=full --show-leak-kinds=all ./src/id
 
-address: ./src/identifier_valgrind.c
-	gcc -g -Wall -Wfatal-errors -fsanitize=address ./src/identifier_valgrind.c -o ./src/test
+address: ./src/identifier_main.c
+	gcc -g -Wall -Wfatal-errors -fsanitize=address ./src/identifier_main.c -o ./src/test
 	./src/test
 
 clean:
