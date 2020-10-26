@@ -20,7 +20,7 @@ install:
 script:
   - make
   - make testunity
-  - make cov
+  - make gcov
   - make check
   - make valgrind
   - make address
