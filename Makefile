@@ -16,7 +16,7 @@ testunity: ./test/TestFoo.c
 	ruby ./auto/generate_test_runner.rb test/TestFoo.c  test/test_runners/TestFoo_Runner.c
 	
 
-gcov: ./src/identifier_main.c
+cov: ./src/identifier_main.c
 	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ ./src/identifier_main.c
 	./cov
 	gcov -b identifier_main.c
