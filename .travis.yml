@@ -19,6 +19,7 @@ install:
 
 script:
   - make
+  - make identifier
   - make cov
   - make check
   - make valgrind
