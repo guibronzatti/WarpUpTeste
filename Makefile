@@ -25,7 +25,7 @@ check: ./src/identifier.c
 	cppcheck ./src/identifier.c
 	
 valgrind: ./src/identifier_main.c
-	gcc -g -Wall -Wfatal-errors ./src/identifier_main.c -o ./sr/id
+	gcc -g -Wall -Wfatal-errors ./src/identifier_main.c -o ./src/id
 	valgrind --leak-check=full --show-leak-kinds=all ./src/id
 
 address: ./src/identifier_main.c
