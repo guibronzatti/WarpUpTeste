@@ -16,7 +16,7 @@ identifier: ./src/identifier.c ./test/TestFoo.c
 cov: ./src/identifier_main.c
 	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ ./src/identifier_main.c
 	./cov
-	gcov -b identifier_main.c
+	gcov -b identiier_main.c
 
 check: ./src/identifier.c
 	cppcheck ./src/identifier.c
