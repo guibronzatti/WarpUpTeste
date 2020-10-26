@@ -11,10 +11,7 @@ identifier: ./src/identifier.c ./test/TestFoo.c
 	#$(GCC) $(CFLAGS) -o test_foo.out ./src/identifier.c ./test/TestFoo.c
 	gcc -std=c99 -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wstrict-prototypes -Wundef -Wold-style-definition -Isrc -I./src  ./src/unity.c src/identifier.c  test/TestFoo.c  test/test_runners/TestFoo_Runner.c -o test_foo.out
 	./test_foo.out
-
-test: ./test/TestFoo.c
 	ruby ./auto/generate_test_runner.rb test/TestFoo.c  test/test_runners/TestFoo_Runner.c
-	
 
 cov: ./src/identifier_main.c
 	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ ./src/identifier_main.c
