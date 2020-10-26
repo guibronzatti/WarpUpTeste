@@ -3,7 +3,7 @@
 sudo: false
 language: c
 compiler:
-  - gcc
+  - gccvdfbh
 addons:
   apt:
     sources:
