@@ -56,9 +56,11 @@ int main(void){
   char teste2[7] = "abcfkj";
   char teste3[8] = "ssabcgg";
   char teste4[4] = "3ad";
+  char teste5[1] = "";
   funcTeste(teste);
   funcTeste(teste2);
   funcTeste(teste3);
   funcTeste(teste4);
+  funcTeste(teste5);
   return 0;
 }
