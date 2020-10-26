@@ -19,7 +19,7 @@ install:
 
 script:
   - make
-  - make testuni
+  - make testunity
   - make cov
   - make check
   - make valgrind
