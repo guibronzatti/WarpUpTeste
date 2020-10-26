@@ -13,7 +13,7 @@ addons:
 before_install:
   - sudo apt-get install rbenv
   - sudo apt-get install cppcheck
-  - sudo apt-get install valgrind
+  - sudo apt-get install valgrin
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 
