@@ -20,7 +20,7 @@ install:
 script:
   - make
   - make cov
-  - make heck
+  - make check
   - make valgrind
   - make address
 #  - make test
