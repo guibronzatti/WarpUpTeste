@@ -19,8 +19,9 @@ install:
 
 script:
   - make
-  - make cov
+  - make identifier
   - make check
+  - make cov
   - make valgrind
   - make address
 #  - make test
