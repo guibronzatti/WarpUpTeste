@@ -53,7 +53,7 @@ int funcTeste(char *teste) {
 
 int main(void){
   char teste[7] = "Abcd12";
-  char teste2[7] = "abcfkj";
+  char teste2[7] = "abefkj";
   char teste3[8] = "ssabcgg";
   char teste4[4] = "3ad";
   char teste5[1] = "";
