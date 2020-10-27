@@ -4,7 +4,7 @@ Simple Travis example for C using GCC compiler based on the identifier program p
 
 Test results:
 
-[<img alt="Build Status" src="https://travis-ci.org/guibronzatti/WarmUpTeste.svg?branch=main" height="40">][travis-url]
+[<img alt="Build Status" src="https://travis-ci.org/guibronzatti/WarmUpTest.svg?branch=main" height="40">][travis-url]
 
 Important files:
 
@@ -22,10 +22,10 @@ License
 -------
 MIT License. See [LICENSE](LICENSE) for details.
 
-[main-url]: https://github.com/guibronzatti/WarmUpTeste
-[readme-url]: https://github.com/guibronzatti/WarmUpTeste/blob/main/README.md
-[license-url]: https://github.com/guibronzatti/WarmUpTeste/blob/main/LICENSE
+[main-url]: https://github.com/guibronzatti/WarmUpTest
+[readme-url]: https://github.com/guibronzatti/WarmUpTest/blob/main/README.md
+[license-url]: https://github.com/guibronzatti/WarmUpTest/blob/main/LICENSE
 [license-img]: https://img.shields.io/github/license/rsp/travis-hello-modern-cpp.svg
-[travis-url]: https://travis-ci.org/guibronzatti/WarmUpTeste
-[travis-img]: https://travis-ci.org/guibronzatti/WarmUpTeste.svg?branch=master
+[travis-url]: https://travis-ci.org/guibronzatti/WarmUpTest
+[travis-img]: https://travis-ci.org/guibronzatti/WarmUpTest.svg?branch=master
 [github-follow-url]: https://github.com/guibronzatti
